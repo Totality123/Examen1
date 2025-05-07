@@ -10,8 +10,11 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/barcos")
 public class BarcoController {
-    
-    private BarcoService barcoService;
+    private final BarcoService barcoService;
+
+    public BarcoController(BarcoService barcoService) {
+        this.barcoService = barcoService;
+    }
 
     @GetMapping
     public List<Barco> obtenerTodos() {

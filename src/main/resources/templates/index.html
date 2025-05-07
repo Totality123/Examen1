@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Azulada</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    
+    <h1>Lista de Productos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Capacidad</th>
+                <th>acciones</th>
+            </tr>
+        </thead>
+        <tbody id="Tabla-Barcos">
+
+        </tbody>
+
+<button class="btn edit" onclick="openModalCrear()">Crear Barco</button>
+    </table>
+
+
+<div class="modal-container" id="modalContainer">
+    
+</div>
+
+    <script th:src="@{/js/Barco.js}"></script>
+    <script th:src="@{/js/Contenedor.js}"></script>
+
+</body>
+</html>

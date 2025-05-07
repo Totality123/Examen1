@@ -2,6 +2,7 @@ package com.example.examen.services;
 
 import com.example.examen.models.Barco;
 import com.example.examen.repositories.BarcoRepository;
+
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -9,7 +10,11 @@ import java.util.Optional;
 @Service
 public class BarcoService {
 
-    private BarcoRepository barcoRepository;
+    private final BarcoRepository barcoRepository;
+
+    public BarcoService(BarcoRepository barcoRepository) {
+        this.barcoRepository = barcoRepository;
+    }
 
     public List<Barco> obtenerTodos() {
         return barcoRepository.findAll();

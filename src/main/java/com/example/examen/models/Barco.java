@@ -2,6 +2,8 @@ package com.example.examen.models;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,7 +30,8 @@ public class Barco {
     @Column()
     private int capacidad;
 
-    @OneToMany(mappedBy = "Barco", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "barco", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonIgnore
     private List<Contenedor> contenedores;
-    
+
 }
