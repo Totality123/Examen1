@@ -29,4 +29,8 @@ public class ContenedorService {
     public void eliminar(int id) {
         contenedorRepository.deleteById(id);
     }
+
+    public List<Contenedor> obtenerPorBarcoId(int barcoId) {
+        return contenedorRepository.findByBarcoId(barcoId);
+    }    
 }
